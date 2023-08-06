@@ -1,6 +1,5 @@
 package Pack1;
 
-import javax.management.RuntimeErrorException;
 
 public class Personne {
 	private String nom;
@@ -13,10 +12,9 @@ public class Personne {
 	}
 	
 	public Personne(String nom, String prenom, String mail) {
-		super();
-		this.nom = nom;
-		this.prenom = prenom;
-		this.mail = mail;
+		this.setNom(nom);
+		this.setPrenom(prenom);
+		this.setMail(mail);
 	}
 
 	public String getNom() {
@@ -57,6 +55,11 @@ public class Personne {
 		{
 		this.mail = mail;
 		}
+	}
+
+	@Override
+	public String toString() {
+		return "Personne [nom=" + nom + ", prenom=" + prenom + ", mail=" + mail + "]";
 	}
 	
 	
