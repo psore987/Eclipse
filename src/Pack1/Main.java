@@ -10,6 +10,9 @@ public class Main {
 		System.out.println(emp);
 		
 		Client cli = new Client(14,"Brel","Jacques","j.brel@gmail.com");
+		System.out.println(cli);
+		Client cli2 = new Client(2);
+		System.out.println(cli2);
 	}
 
 }

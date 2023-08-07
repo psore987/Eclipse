@@ -2,7 +2,7 @@ package Pack1;
 
 import javax.management.RuntimeErrorException;
 
-public class Client {
+public class Client extends Personne {
 
 	private int idClient;
 	
@@ -10,6 +10,7 @@ public class Client {
 	public Client (int id, String nom, String prenom, String mail) {
 		super(nom, prenom, mail); // on utilise le constructeur du parent "personne"
 		this.setIdClient(id); // on ajoute simplement le nouveau champ du fils
+		} 
 	
 	public Client(int idClient) {
 		super();
