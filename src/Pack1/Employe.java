@@ -2,12 +2,25 @@ package Pack1;
 
 public class Employe extends Personne {
 	
+	private static final int SMIC = 1500;
 	int salaire;
 	
+	
+	public Employe() {
+		super();    // on fait appel au constructeur de la classe parent : Personne
+		this.setSalaire(SMIC);
+	}
+	
 	public Employe(int salaire) {
-		super("Jean","Paul","jean.paul@gmail.com");
+		super();
 		this.salaire = salaire;
 	}
+	
+	public Employe (String nom, String prenom, String mail, int salaire) {
+		super(nom, prenom, mail); // on utilise le constructeur du parent "personne"
+		this.setSalaire(salaire); // on ajoute simplement le nouveau champ du fils
+	}
+
 
 	public int getSalaire() {
 		return salaire;
@@ -23,8 +36,8 @@ public class Employe extends Personne {
 
 	@Override
 	public String toString() {
-		return "Employe [salaire=" + salaire + ", getNom()=" + getNom() + ", getPrenom()=" + getPrenom()
-				+ ", getMail()=" + getMail() + "]";
+		return super.toString() + "Salaire : " + this.salaire + "€";
+		
 	}
 
 

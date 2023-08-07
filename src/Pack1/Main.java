@@ -6,8 +6,10 @@ public class Main {
 		Personne pers = new Personne("Joe","Cooker","joe.cooker@gmail.com");
 		System.out.println(pers);
 		
-		Employe emp = new Employe(500);
+		Employe emp = new Employe("Jason","Bourne","jbourne@cia.com",10000);
 		System.out.println(emp);
+		
+		Client cli = new Client(14,"Brel","Jacques","j.brel@gmail.com");
 	}
 
 }
